@@ -12,6 +12,6 @@ Everything after # is ignored by the interpreter.
 ```
 recursao(z) print z
 @recursao 10
-``` markdown
+```
 
 
