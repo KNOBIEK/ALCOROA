@@ -3,6 +3,6 @@
 #This document describes the basic syntax, concepts, and examples of the **ALCOROA** language.  
 
 ##Comments
-`#this is a comment`
+`#this is a comment`<br>
 Everything after # is ignored by the interpreter.
 
