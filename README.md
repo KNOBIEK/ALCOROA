@@ -1,5 +1,4 @@
 # ALCOROA Language – Overview and Examples
-[DOWNLOAD ALCOROA](https://github.com/KNOBIEK/ALCOROA/releases)  
 ## This document describes the basic syntax, concepts, and examples of the **ALCOROA** language.  
 
 # Comments  
@@ -51,7 +50,6 @@ Rules:
 ```
 recursao(GEN) REC(> GEN 1) print GEN : GEN = - GEN 1  
 @recursao 100  
-
 ```
 GEN is a global register  
 Recursion stops when GEN <= 1  
@@ -70,12 +68,7 @@ Type annotations are optional and not enforced.
 ```
 y1 = 0
 y2 = 0
-fib(n) REC(> n 1) 
-    SEQ y1 = - n 1 :
-    SEQ y1 = n :
-    y2 = + y1 y2 :
-    n = - n 1
-
+fib(n) REC(> n 1) SEQ y1 = - n 1 : SEQ y1 = n : y2 = + y1 y2 : n = - n 1
 @fib 10
 print y2
 ```
@@ -97,11 +90,7 @@ print ITEM x 0
 ## Iterating Over a List with Recursion
 ```
 showlist(index) print * ITEM x index 
-
-recursao(size) REC(> size 0) 
-    @showlist size :
-    size = - size 1 
-
+recursao(size) REC(> size 0) @showlist size : size = - size 1 
 @recursao 11
 ```
 
@@ -131,7 +120,6 @@ GEN ,GENX and GENY is a global variable accessible from all scopes.
 ```
 x = cond(> 2 1) print 33 : print "false"
 GEN = x
-
 ```
 
 # Scope Example
@@ -174,7 +162,6 @@ print node
 FILE = "index.html"
 CONTENT = "console.log('ALCOROA')\n"
 CONTENT = + CONTENT "alert('calling ALCOROA')"
-
 WRITE FILE : CONTENT
 ```
 # List Size Example
@@ -186,26 +173,29 @@ REC(< GEN LIST_SIZE arr) print ITEM arr GEN : GEN = + GEN 1
 
 
 
+## How to Use
+### Running ALCOROA
 
+1. Download the **ALCOROA binary**.  
+2. Run the binary in your terminal, followed by the name of the source file.  
 
+#### Example
+```sh
+alcoroa main.alcoroa
+```
 
+# Adding Libraries
+You can load additional source files (libraries) by passing them as extra arguments when running ALCOROA.  
+## Example
+```sh
+alcoroa main.alcoroa mylib.alcoroa
+```
+In this example:  
+main.alcoroa is the main entry file  
+mylib.alcoroa is an additional library loaded at runtime  
+Multiple libraries can be added in the same way.  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[DOWNLOAD ALCOROA](https://github.com/KNOBIEK/ALCOROA/releases)  
 
 
 
