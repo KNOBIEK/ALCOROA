@@ -16,5 +16,14 @@ recursao(z) print z
 Defines a function named recursao that receives one parameter and prints it.  
 ## Function with Type Tags  
 
-Type tags like int, float,list, and text are *ignored by the lexer*.  
+Type tags like int, float,list, and text are **ignored by the lexer**.  
 They exist only as markers for readability and organization.  
+
+# Recursion  
+## Simple Recursion (Without TCO)  
+```
+recursao(int z) SEQ 10 : @recursao z  
+@recursao 10
+```
+
+
