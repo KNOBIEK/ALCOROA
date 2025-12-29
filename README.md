@@ -103,8 +103,102 @@ recursao(size) REC(> size 0)
     size = - size 1 
 
 @recursao 11
+```
+
+## Clone and List Manipulation
+```
+z = [1 2 3]
+CLONE 99 : z
+print ITEM z 3
+```
+## Final Working Example
+```
+x = [1 2 3 4 5]
+z = CLONE ITEM x 2 : []
+print ITEM z 0
+```
+# Conditional Expression (cond)
+```
+cond(condition) expr_if_true : expr_if_false
+```
+
+Example:  
+```
+cond(> 2 1) print 33 : print "false"
+```
+# Global Register (GEN)
+GEN ,GENX and GENY is a global variable accessible from all scopes.
+```
+x = cond(> 2 1) print 33 : print "false"
+GEN = x
 
 ```
+
+# Scope Example
+```
+{
+    print GEN
+}
+```
+# Operators Examples
+```
+print + "hello, " "world"
+print == "hi" "hi"
+
+x = 32.2
+y = -100
+
+print >= x 2
+print <= 2 y
+```
+
+# SPLIT Text
+```
+text = "fabio 2 hello 2 welcome "
+arg = " "
+z = SPLIT text : arg
+print z
+```
+Splits a text into a list based on a delimiter.  
+
+# Tokens, Parser, and Evaluator Example
+```
+index = 0
+tokens = ["add" 2 5]
+parse = ITEM tokens index
+node = cond(== parse "add") + ITEM tokens 1 ITEM tokens 2 : 0
+print node
+```
+# File Writing Example
+```
+FILE = "index.html"
+CONTENT = "console.log('ALCOROA')\n"
+CONTENT = + CONTENT "alert('calling ALCOROA')"
+
+WRITE FILE : CONTENT
+```
+# List Size Example
+```
+arr = [3 2 1]
+GEN = 0
+REC(< GEN LIST_SIZE arr) print ITEM arr GEN : GEN = + GEN 1
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
