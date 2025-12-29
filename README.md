@@ -25,7 +25,7 @@ They exist only as markers for readability and organization.
 recursao(int z) SEQ 10 : @recursao z  
 @recursao 10  
 ```
-This is a recursion **without Tail Call Optimization (TCO)**.
+This is a recursion **without Tail Call Optimization (TCO)**.  
 ⚠️ Avoid recursion depth greater than 10.
 
 # SEQ Expression
@@ -46,6 +46,73 @@ Rules:
 1 A base condition  
 2 An expression to execute  
 3 Updated arguments to move toward the base condition  
+
+# Final Optimized Recursion Example  
+```
+recursao(GEN) REC(> GEN 1) print GEN : GEN = - GEN 1  
+@recursao 100  
+
+```
+GEN is a global register  
+Recursion stops when GEN <= 1  
+
+# Variable Assignment  
+```
+x = 10
+int x = 10
+float x = 10
+text x = "fabio"
+```
+Type annotations are optional and not enforced.  
+
+# Fibonacci Example
+
+```
+y1 = 0
+y2 = 0
+fib(n) REC(> n 1) 
+    SEQ y1 = - n 1 :
+    SEQ y1 = n :
+    y2 = + y1 y2 :
+    n = - n 1
+
+@fib 10
+print y2
+```
+Calculates the Fibonacci sequence using optimized recursion.  
+
+# Lists
+## List Definition
+
+```
+x = [1 2 3 4 5 6 7 8 9 10 11 12]  
+```
+
+## Accessing Items
+```
+print ITEM [3 2 1] 2  
+print ITEM x 0  
+```
+
+## Iterating Over a List with Recursion
+```
+showlist(index) print * ITEM x index 
+
+recursao(size) REC(> size 0) 
+    @showlist size :
+    size = - size 1 
+
+@recursao 11
+
+```
+
+
+
+
+
+
+
+
 
 
 
