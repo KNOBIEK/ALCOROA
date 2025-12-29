@@ -6,3 +6,10 @@
 `#this is a comment`  
 Everything after # is ignored by the interpreter.
 
+##Functions  
+##Basic Function Definition  
+```recursao(z) print z
+@recursao 10
+```
+
+
