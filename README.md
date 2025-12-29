@@ -196,7 +196,7 @@ mylib.alcoroa is an additional library loaded at runtime
 Multiple libraries can be added in the same way.  
 
 [DOWNLOAD ALCOROA](https://github.com/KNOBIEK/ALCOROA/releases)  
-
+**Note:** The current binary is for Windows 64-bit only.  
 
 
 
