@@ -200,7 +200,7 @@ Multiple libraries can be added in the same way.
 [DOWNLOAD ALCOROA](https://github.com/KNOBIEK/ALCOROA/releases)  
 **Note:** The current binary is for Windows 64-bit only.  
 
-
+![alcoroa codes](caminho/para/imagem.jpg](https://github.com/KNOBIEK/ALCOROA/blob/main/imgs/alcoroa_print_code.png)
 
 
 
