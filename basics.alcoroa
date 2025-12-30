@@ -1,0 +1,114 @@
+#this is a comment
+
+#HELLO WORLD
+print "hello, alcoroa"
+
+#VARIABLES
+a = 10
+b = "text"
+c = []
+d = 2.0
+
+#VARIABLES WITH TAG TYPES
+int   a = 10
+text  b = "text"
+list  c = []
+flaot d = 2.0
+
+#FUNCTION
+#Functions must have a parameter and something in their body.
+yourfunc(GEN) 0
+yourfunc(GEN) print GEN
+yourfunc(GEN) + 2 GEN
+
+#CALL FUNCTION 
+yourfunc(GEN) print GEN
+@yourfunc "oi"
+#Function calls should always have an argument, even if it's not used.
+#By default, use 0 (zero) in the arguments if you don't want to pass anything.
+
+#MATHEMATICAL OPERATIONS
+x = + 2 2
+x = * 5.3 4
+x = / 10 2
+x = "salve ," "galera"
+x = + 2 * 10 20  
+
+#LIST 
+x = [2 1 3]
+x = ["oi" + 2 2 @show name]
+
+#GET SIZE OF A LIST
+#LIST_SIZE []
+
+yourlist = [3 2 1]
+LIST_SIZE yourlist  #it returns a number
+
+#GET AN ELEMENT OF A LIST
+#ITEM list index 
+
+yourlist = [3 2 1]
+ITEM yourlist 0
+
+index = 2
+ITEM yourlist index #it returns a element
+
+#CLONE AN ELEMENT TO A LIST
+CLONE EXPR(ELEMENT) : [](LIST)
+
+arr = ["fabio"]
+CLONE 99 : arr
+CLONE 98 : arr
+CLONE 97 : arr
+CLONE 96 : arr
+CLONE 95 : arr
+print arr 
+
+#PRINT 
+#The print function can print most values, including lists.
+
+arr = [4 3 2 1]
+print arr
+
+#SCOPES
+x = 10
+{
+  x = "oi"
+}
+print x 
+#the result of the print is 10
+
+#BOOLEAN EXPRESSION
+== 2 2
+== "a" "b"
+
+#COND 
+#cond(expr) true : false 
+cond(== 10 10) "yes" : "no"
+#this expression returns one of the two values
+result = cond(== 10 10) "yes" : "no"
+print result
+#or you can do this
+print cond(== 10 10) "yes" : "no"
+
+#WRITE 
+#WRITE FILE : CONTENT
+WRITE "main.js" : "console.log('oi')"
+
+#REC 
+#REC stands for deep recursion; REC means record, recursion. 
+#It requires a condition and an update of that condition, which is its tail (tco).
+
+#EXAMPLE
+recursion(GEN)REC(< GEN 100) print GEN : GEN = + GEN 1 
+#REC(EXPR) ACTION : TAIL
+
+
+#SPLIT 
+#SPLIT text : arg
+
+yourtext = "hello ,alcoroa"
+result =  SPLIT yourtext : ","
+#result is 'hello'
+
+
