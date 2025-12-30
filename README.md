@@ -1,6 +1,8 @@
 # ALCOROA Language – Overview and Examples
 ## This document describes the basic syntax, concepts, and examples of the **ALCOROA** language.  
 
+Alcoroa is an interpreted, functional, curried programming language.   
+
 # Comments  
 `#this is a comment`  
 Everything after # is ignored by the interpreter.
