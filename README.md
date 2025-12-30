@@ -1,7 +1,7 @@
 # ALCOROA Language – Overview and Examples
 ## This document describes the basic syntax, concepts, and examples of the **ALCOROA** language.  
 
-Alcoroa is an interpreted, functional, curried programming language with a pragmatic approach.  
+Alcoroa is an interpreted, functional, curried programming language with a pragmatic approach, designed to run within a limited memory space and a lightweight garbage collection system.  
 
 # Comments  
 `#this is a comment`  
