@@ -1,17 +1,17 @@
 #this is a comment
 
 #HELLO WORLD
-print "hello, alcoroa"
+print $hello, alcoroa$
 
 #VARIABLES
 a = 10
-b = "text"
+b = $youtText$
 c = []
 d = 2.0
 
 #VARIABLES WITH TAG TYPES
 int   a = 10
-text  b = "text"
+text  b = $youtText$
 list  c = []
 float d = 2.0
 
@@ -23,7 +23,7 @@ yourfunc(GEN) + 2 GEN
 
 #CALL FUNCTION 
 yourfunc(GEN) print GEN
-@yourfunc "oi"
+@yourfunc $oi$
 #Function calls should always have an argument, even if it's not used.
 #By default, use 0 (zero) in the arguments if you don't want to pass anything.
 
@@ -31,12 +31,12 @@ yourfunc(GEN) print GEN
 x = + 2 2
 x = * 5.3 4
 x = / 10 2
-x = "salve ," "galera"
+x = + $salve ,$ $galera$
 x = + 2 * 10 20  
 
 #LIST 
 x = [2 1 3]
-x = ["oi" + 2 2 @show name]
+x = [$oi$ + 2 2 @show name]
 
 #GET SIZE OF A LIST
 #LIST_SIZE []
@@ -54,15 +54,42 @@ index = 2
 ITEM yourlist index #it returns a element
 
 #CLONE AN ELEMENT TO A LIST
-CLONE EXPR(ELEMENT) : [](LIST)
+#CLONE EXPR(ELEMENT/LIST) : [](LIST)
 
-arr = ["fabio"]
+arr = [$fabio$]
 CLONE 99 : arr
 CLONE 98 : arr
 CLONE 97 : arr
 CLONE 96 : arr
 CLONE 95 : arr
 print arr 
+
+CLONE [3 2 1 [1 2 3]] : []
+CLONE [$oi$ [$hello$ 2 1 5 100 + 2 2] ] : arr
+
+#========
+node_a = [1 2]
+node_b = [3 4]
+node_c = []
+
+CLONE node_a : node_c
+CLONE node_b : node_c
+
+print node_c
+
+#SUM LISTS
+
+node_a = [2 1 4]
+node_b = [10 10 10]
+
+node_c = []
+
+sum_list(GENX)SEQ GEN = 0 : REC(< GEN LIST_SIZE GENX) CLONE + ITEM node_a GEN ITEM node_b GEN : node_c : GEN = + GEN 1
+@sum_list node_a
+
+print node_c
+
+#=========
 
 #PRINT 
 #The print function can print most values, including lists.
@@ -73,27 +100,27 @@ print arr
 #SCOPES
 x = 10
 {
-  x = "oi"
+  x = $oi$
 }
 print x 
 #the result of the print is 10
 
 #BOOLEAN EXPRESSION
 == 2 2
-== "a" "b"
+== $a$ $b$
 
 #COND 
 #cond(expr) true : false 
-cond(== 10 10) "yes" : "no"
+cond(== 10 10) $yes$ : $no$
 #this expression returns one of the two values
-result = cond(== 10 10) "yes" : "no"
+result = cond(== 10 10) $yes$ : $no$
 print result
 #or you can do this
-print cond(== 10 10) "yes" : "no"
+print cond(== 10 10) $yes$ : $no$
 
 #WRITE 
 #WRITE FILE : CONTENT
-WRITE "main.js" : "console.log('oi')"
+WRITE $main.js$ : $console.log('oi')$
 
 #REC 
 #REC stands for deep recursion; REC means record, recursion. 
@@ -107,8 +134,7 @@ recursion(GEN)REC(< GEN 100) print GEN : GEN = + GEN 1
 #SPLIT 
 #SPLIT text : arg
 
-yourtext = "hello ,alcoroa"
-result =  SPLIT yourtext : ","
+yourtext = $hello ,alcoroa$
+result =  SPLIT yourtext : $,$
 #result is 'hello'
-
 
