@@ -1,0 +1,34 @@
+#================= EXEMPLO ALC_WEB =================
+
+#DEFINE THEMES
+THEME_LIGHT = [ $body { background-color: white; color: black; }$ ]
+THEME_DARK  = [ $body { background-color: black; color: white; }$ ]
+
+#LOAD THEME(LIGHT) 
+GENX = 0
+GENY = LIST_SIZE THEME_LIGHT
+@ALC_WEB_LOAD_THEME THEME_LIGHT
+@ALC_WEB_SET_THEME THEME_LIGHT
+
+#CREATE BUTTON
+@ALC_WEB_ELEM_OPEN $button id='toggleTheme'$
+@ALC_WEB_ADD_CONTENT $Trocar Tema$
+@ALC_WEB_ELEM_CLOSE $button$
+
+#ADD JS TO CHANGE THEME
+@ALC_WEB_ELEM_OPEN $script$
+@ALC_WEB_ACTION_ID_JS [$toggleTheme$ $click$ 
+$
+  if(document.body.style.backgroundColor === 'white'){
+    document.body.style.backgroundColor = 'black';
+    document.body.style.color = 'white';
+  } else {
+    document.body.style.backgroundColor = 'white';
+    document.body.style.color = 'black';
+  }
+$]
+@ALC_WEB_ELEM_CLOSE $script$
+print ALC_WEB_CONTENT
+WRITE $index.html$ : ALC_WEB_CONTENT
+#==========================================================
+
