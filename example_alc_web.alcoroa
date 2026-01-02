@@ -1,4 +1,4 @@
-#================= EXEMPLO ALC_WEB =================
+#================= EXEMPLE ALC_WEB =================
 
 #DEFINE THEMES
 THEME_LIGHT = [ $body { background-color: white; color: black; }$ ]
