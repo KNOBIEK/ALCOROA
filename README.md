@@ -2,7 +2,9 @@
 ## This document describes the basic syntax, concepts, and examples of the **ALCOROA** language.  
 
 Alcoroa is an interpreted, functional, curried programming language with a pragmatic approach, designed to run within a limited memory space and a lightweight garbage collection system.  
+![alcoroa codes](https://github.com/KNOBIEK/ALCOROA/blob/main/imgs/alcoroa_print_code.png)
 ![alcoroa codes](https://github.com/KNOBIEK/ALCOROA/blob/main/imgs/alcoroa_print_code2.png)
+![alcoroa codes](https://github.com/KNOBIEK/ALCOROA/blob/main/imgs/alcoroa_print_code3.png)
 
 ## How to Use
 ### Running ALCOROA
