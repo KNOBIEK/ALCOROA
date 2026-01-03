@@ -138,3 +138,8 @@ yourtext = $hello ,alcoroa$
 result =  SPLIT yourtext : $,$
 #result is 'hello'
 
+
+#GET TIME 
+#GET_TIME is a list that retuns year mounth day hour min sec 
+print ITEM GET_TIME 0
+
