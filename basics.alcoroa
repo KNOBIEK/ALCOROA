@@ -142,4 +142,5 @@ result =  SPLIT yourtext : $,$
 #GET TIME 
 #GET_TIME is a list that retuns year mounth day hour min sec 
 print ITEM GET_TIME 0
+print GET_TIME
 
