@@ -2,7 +2,7 @@
 
 #HELLO WORLD
 print $hello, alcoroa$
-println $hello, alcoroa$ #print with a newline(\n)
+println $hello, alcoroa$ #print with an newline(\n)
 
 #MULTI PRINT 
 #you can use a function from stdlib
