@@ -2,6 +2,14 @@
 
 #HELLO WORLD
 print $hello, alcoroa$
+println $hello, alcoroa$ #print with a newline(\n)
+
+#MULTI PRINT 
+#you can use a function from stdlib
+@ALC_PRINTLN [123 321 321 31 2 $mult print$]
+#OR
+print [yourargs 2 1 $oi$ @yourfunc]
+println [yourargs 2 1 $oi$ @yourfunc]
 
 #VARIABLES
 a = 10
@@ -130,7 +138,6 @@ WRITE $main.js$ : $console.log('oi')$
 recursion(GEN)REC(< GEN 100) print GEN : GEN = + GEN 1 
 #REC(EXPR) ACTION : TAIL
 
-
 #SPLIT 
 #SPLIT text : arg
 
@@ -138,9 +145,10 @@ yourtext = $hello ,alcoroa$
 result =  SPLIT yourtext : $,$
 #result is 'hello'
 
-
 #GET TIME 
 #GET_TIME is a list that retuns year mounth day hour min sec 
 print ITEM GET_TIME 0
 print GET_TIME
+
+
 
